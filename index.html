@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="http://www.unipune.ac.in/" target="_blank">University Website</a>
+        <img src="logo.png" alt="University Logo" width=500px>
+        <h1>S.P.P.U. CGPA Calculator</h1>
+    </nav>
+    <!--<div id="below_n">-->
+    <h2>CGPA Calculator</h2>
+    </div>
+
+    <div id="main_body">
+        <form id="info">
+            <label for="1stsem">Semester-1 SGPA</label>
+            <input id="1stsem" type="text">
+            <label for="2ndsem">Semester-2 SGPA</label>
+            <input id="2ndsem" type="text"><br>
+
+            <label for="3rdsem">Semester-3 SGPA</label>
+            <input id="3rdsem" type="text">
+            <label for="4thsem">Semester-4 SGPA</label>
+            <input id="4thsem" type="text"><br>
+
+            <label for="5thsem">Semester-5 SGPA</label>
+            <input id="5thsem" type="text">
+            <label for="6thsem">Semester-6 SGPA</label>
+            <input id="6thsem" type="text"><br>
+
+            <label for="7thsem">Semester-7 SGPA</label>
+            <input id="7thsem" type="text">
+            <label for="8thsem">Semester-8 SGPA</label>
+            <input id="8thsem" type="text"><br>
+            
+
+        </form>
+        <button id="sub" onclick="fun1()">Submit</button>
+            <span id="text" class="up">Total CGPA: </span>
+            <div id="show"></div>
+
+            <span id="text" class="up">Percentage: </span>
+            <div id="show2"></div>
+
+        <footer>
+            <hr>
+            <code>CGPA Calculated as per 2015 Pattern Credit Pattern.</code>
+            <code>Developed by &copy; Sudesh Pawar and this website is not affiliated to any University and not official in any manner. </code>
+        </footer>
+</body>
+<script>
+    function fun1() 
+    {
+        a = [];
+        a[0] = Number(document.getElementById("1stsem").value*25);
+        a[1] = Number(document.getElementById("2ndsem").value*25);
+        a[2] = Number(document.getElementById("3rdsem").value*25);
+        a[3] = Number(document.getElementById("4thsem").value*25);
+        a[4] = Number(document.getElementById("5thsem").value*23);
+        a[5] = Number(document.getElementById("6thsem").value*23);
+        a[6] = Number(document.getElementById("7thsem").value*22);
+        a[7] = Number(document.getElementById("8thsem").value*22);
+        var tot=0;
+        var cnt=0;
+        var div=0;
+        for(var i=0;i<8;i++)
+        {
+            if(Number(a[i])==0)
+            {
+                cnt+=1;
+            }
+            else
+            {
+                if(i==4 || i==5)
+                {
+                    div+=23;
+                }
+                else if(i==6 || i==7)
+                {
+                    div+=22;
+                }
+                else
+                {
+                    div+=25;
+                }
+
+                tot+=Number(a[i]);
+            }
+        }
+
+        var cgpa=tot/div;
+        document.getElementById("show").innerHTML=`<span class="up">${cgpa.toFixed(2)}</span>`;
+
+        var perc=cgpa*8.8;
+        document.getElementById("show2").innerHTML=`<span class="up">${perc.toFixed(2)}</span>`;
+    }
+
+</script>
+</html>
