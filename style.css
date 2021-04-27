@@ -10,7 +10,7 @@ html { font-size:100%; }
     display: inline-block;
     border-radius: 5px;
     color: White;
-    float:left;
+    float: left;
     padding:5px;
     margin: 15px;
     text-decoration: none;
@@ -20,7 +20,8 @@ html { font-size:100%; }
 {
     border: 2px solid black;
     border-radius: 35px;
-    background:rgba(22, 26, 255, 0.56);
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
     overflow: auto;
 }
 
@@ -45,12 +46,14 @@ html { font-size:100%; }
     width:50vw;
     margin:auto;
 }
-#main_body input,label, #sub{
+#main_body input,label, #sub
+{
     display: block;
     width:60%;
     margin:3px auto 3px auto;
     text-align: center;
-    background: rgba(255,255,255,0.75);
+    background-color: #f9ea8f;
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
     border-radius: 20px;
     font-family: monospace;
     font-weight: bold;
@@ -59,7 +62,8 @@ html { font-size:100%; }
 h2{
     width:45vw;
    color: white;
-   background:rgba(22, 26, 255, 0.56);
+   background-color: #0cbaba;
+   background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
    border-radius: 50%;
     text-align: center;
     margin: 5vh Auto;
@@ -72,7 +76,8 @@ h2{
 }
 body
 {
-    background-image:url(bg.jpg);
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
     background-size: cover;
 }
 
@@ -83,14 +88,16 @@ body
     color:white;
     width: 15vw;
     border: 2px solid black;
-    background:rgba(22, 26, 255, 0.56); 
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 
 #main_body #sub
 {
     display: inline-block;
     width: 30%;
-    background:rgba(22, 26, 255, 0.56);
+    background-color: #f9484a;
+    background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
     color: white;
     margin:auto;
     padding:2%;
