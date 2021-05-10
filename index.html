@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Calculator</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">CGPA Calculator</h2>
+                    <form method="POST">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="1stsem">Semester-1 SGPA</label>
+                                    <input class="input--style-4" id="1stsem" type="number" step="0.01">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="2ndsem">Semester-2 SGPA</label>
+                                    <input class="input--style-4" id="2ndsem" type="number" step="0.01"><br>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="3rdsem">Semester-3 SGPA</label>
+                                    <input class="input--style-4" id="3rdsem" type="number" step="0.01">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="4thsem">Semester-4 SGPA</label>
+                                    <input class="input--style-4" id="4thsem" type="number" step="0.01"><br>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="5thsem">Semester-5 SGPA</label>
+                                    <input class="input--style-4" id="5thsem" type="number" step="0.01">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="6thsem">Semester-6 SGPA</label>
+                                    <input class="input--style-4" id="6thsem" type="number" step="0.01"><br>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+
+                                    <label for="7thsem">Semester-7 SGPA</label>
+                                    <input class="input--style-4" id="7thsem" type="number" step="0.01">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label for="8thsem">Semester-8 SGPA</label>
+                                    <input class="input--style-4" id="8thsem" type="number" step="0.01"><br>
+                                </div>
+                            </div>         
+                        </div>
+                        <div class="p-t-15">
+                            <input class="btn btn--radius-2 btn--blue"0 id="Reset" type="reset" value="Reset">
+                                </div>
+                    </form>
+                    <div class="p-t-15">
+                        <input class="btn btn--radius-2 btn--blue" onclick="fun1()" id="submit", type="submit" value="Submit">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h2 class="title">Calculations</h2>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Total CGPA:</label>
+                                <div class="input--style-4" id="show"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="text">
+                               <span> <label for="Percentage">Percentage:</label>
+                                <div class="input--style-4" id="show2"></div></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    function fun1() {
+        a = [];
+        a[0] = Number(document.getElementById("1stsem").value * 25);
+        a[1] = Number(document.getElementById("2ndsem").value * 25);
+        a[2] = Number(document.getElementById("3rdsem").value * 25);
+        a[3] = Number(document.getElementById("4thsem").value * 25);
+        a[4] = Number(document.getElementById("5thsem").value * 23);
+        a[5] = Number(document.getElementById("6thsem").value * 23);
+        a[6] = Number(document.getElementById("7thsem").value * 22);
+        a[7] = Number(document.getElementById("8thsem").value * 22);
+        var tot = 0;
+        var cnt = 0;
+        var div = 0;
+        for (var i = 0; i < 8; i++) {
+            if (Number(a[i]) == 0) {
+                cnt += 1;
+            }
+            else {
+                if (i == 4 || i == 5) {
+                    div += 23;
+                }
+                else if (i == 6 || i == 7) {
+                    div += 22;
+                }
+                else {
+                    div += 25;
+                }
+
+                tot += Number(a[i]);
+            }
+        }
+
+        var cgpa = tot / div;
+        document.getElementById("show").innerHTML = `<span class="up">${cgpa.toFixed(2)}</span>`;
+
+        var perc = cgpa * 8.8;
+        document.getElementById("show2").innerHTML = `<span class="up">${perc.toFixed(2)}</span>`;
+    }
+
+</script>
+</html>
+<!-- end document-->
