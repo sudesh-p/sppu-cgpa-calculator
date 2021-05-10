@@ -104,6 +104,58 @@
                                 <div class="input--style-4" id="show2"></div></span>
                             </div>
                         </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 1 Agg. :</label>
+                                <div class="input--style-4" id="shows1"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 2 Agg. :</label>
+                                <div class="input--style-4" id="shows2"></div></span>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 3 Agg. :</label>
+                                <div class="input--style-4" id="shows3"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 4 Agg. :</label>
+                                <div class="input--style-4" id="shows4"></div></span>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 5 Agg. :</label>
+                                <div class="input--style-4" id="shows5"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 6 Agg. :</label>
+                                <div class="input--style-4" id="shows6"></div></span>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 7 Agg. :</label>
+                                <div class="input--style-4" id="shows7"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 8 Agg. :</label>
+                                <div class="input--style-4" id="shows8"></div></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -151,6 +203,30 @@
 
         var perc = cgpa * 8.8;
         document.getElementById("show2").innerHTML = `<span class="up">${perc.toFixed(2)}</span>`;
+
+        var perc1 = Number(document.getElementById("1stsem").value) * 8.8;
+        document.getElementById("shows1").innerHTML = `<span class="up">${perc1.toFixed(2)}</span>`;
+
+        var perc2 = Number(document.getElementById("2ndsem").value) * 8.8;
+        document.getElementById("shows2").innerHTML = `<span class="up">${perc2.toFixed(2)}</span>`;
+
+        var perc3 = Number(document.getElementById("3rdsem").value) * 8.8;
+        document.getElementById("shows3").innerHTML = `<span class="up">${perc3.toFixed(2)}</span>`;
+
+        var perc4 = Number(document.getElementById("4thsem").value) * 8.8;
+        document.getElementById("shows4").innerHTML = `<span class="up">${perc4.toFixed(2)}</span>`;
+
+        var perc5 = Number(document.getElementById("5thsem").value) * 8.8;
+        document.getElementById("shows5").innerHTML = `<span class="up">${perc5.toFixed(2)}</span>`;
+
+        var perc6 = Number(document.getElementById("6thsem").value) * 8.8;
+        document.getElementById("shows6").innerHTML = `<span class="up">${perc6.toFixed(2)}</span>`;
+
+        var perc7 = Number(document.getElementById("7thsem").value) * 8.8;
+        document.getElementById("shows7").innerHTML = `<span class="up">${perc7.toFixed(2)}</span>`;
+
+        var perc8 = Number(document.getElementById("8thsem").value) * 8.8;
+        document.getElementById("shows8").innerHTML = `<span class="up">${perc8.toFixed(2)}</span>`;
     }
 
 </script>
