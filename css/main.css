@@ -508,10 +508,10 @@ input::-webkit-inner-spin-button {
 {
   background-color: #e5e5e5!important;
 }
-.py-4{padding-top:.5rem!important}
+.py-4{padding-top:.1rem!important}
 .text-center{text-align:center!important}
 .container{min-width:100%!important}
 .text-muted{color:#6c757d!important}
 .mb-0{margin-bottom:0!important}
-.py-2{padding-top:.5rem!important}
-.py-2{padding-bottom:.5rem!important}
+.py-2{padding-top:.3rem!important}
+.py-2{padding-bottom:.3rem!important}
