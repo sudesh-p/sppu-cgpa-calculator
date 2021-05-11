@@ -109,6 +109,63 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <h2 class="title">Addition of Grade Points</h2>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 1 :</label>
+                                <div class="input--style-4" id="gp1"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 2:</label>
+                                <div class="input--style-4" id="gp2"></div></span>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 3 :</label>
+                                <div class="input--style-4" id="gp3"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 4 :</label>
+                                <div class="input--style-4" id="gp4"></div></span>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 5:</label>
+                                <div class="input--style-4" id="gp5"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 6 :</label>
+                                <div class="input--style-4" id="gp6"></div></span>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 7 :</label>
+                                <div class="input--style-4" id="gp7"></div></span>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <span><label for="CGPA">Sem 8 :</label>
+                                <div class="input--style-4" id="gp8"></div></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
                     <h2 class="title">Individual Aggregates</h2>
                     <div class="row row-space">
                         <div class="col-2">
@@ -209,6 +266,31 @@
 
         var perc = cgpa * 8.8;
         document.getElementById("show2").innerHTML = `<span class="up">${perc.toFixed(2)}</span>`;
+
+        var gp1 = Math.ceil(Number(a[0])) ;
+        document.getElementById("gp1").innerHTML = `<span class="up">${gp1}</span>`;
+
+        var gp2 = Math.ceil(Number(a[1])) ;
+        document.getElementById("gp2").innerHTML = `<span class="up">${gp2}</span>`;
+
+        var gp3 = Math.ceil(Number(a[2])) ;
+        document.getElementById("gp3").innerHTML = `<span class="up">${gp3}</span>`;
+
+        var gp4 = Math.ceil(Number(a[3])) ;
+        document.getElementById("gp4").innerHTML = `<span class="up">${gp4}</span>`;
+
+        var gp5 = Math.ceil(Number(a[4])) ;
+        document.getElementById("gp5").innerHTML = `<span class="up">${gp5}</span>`;
+
+        var gp6 = Math.ceil(Number(a[5])) ;
+        document.getElementById("gp6").innerHTML = `<span class="up">${gp6}</span>`;
+
+        var gp7 = Math.ceil(Number(a[6])) ;
+        document.getElementById("gp7").innerHTML = `<span class="up">${gp7}</span>`;
+
+        var gp8 = Math.ceil(Number(a[7])) ;
+        document.getElementById("gp8").innerHTML = `<span class="up">${gp8}</span>`;
+
 
         var perc1 = Number(document.getElementById("1stsem").value) * 8.8;
         document.getElementById("shows1").innerHTML = `<span class="up">${perc1.toFixed(2)}</span>`;
